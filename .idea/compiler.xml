@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BorrowingsService" />
+        <module name="CustomerService" />
+        <module name="BookCommandService (1)" />
+        <module name="BookCommandService (2)" />
+        <module name="APIGateWay" />
+        <module name="EurekaServer2" />
+        <module name="ConfigServer2" />
+        <module name="ReviewService" />
+        <module name="EurekaServer1" />
+        <module name="BookQueriesService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BookCommandModule" target="11" />
+      <module name="BookCommandModule2" target="11" />
+      <module name="BookQueriesModule" target="11" />
+      <module name="BorrowingsModule" target="11" />
+      <module name="CustomerModule" target="11" />
+      <module name="ReviewModule" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIGateWay" options="-parameters" />
+      <module name="BookCommandModule" options="-parameters" />
+      <module name="BookCommandModule2" options="-parameters" />
+      <module name="BookCommandService (1)" options="-parameters" />
+      <module name="BookCommandService (2)" options="-parameters" />
+      <module name="BookQueriesModule" options="-parameters" />
+      <module name="BookQueriesService" options="-parameters" />
+      <module name="BorrowingsModule" options="-parameters" />
+      <module name="BorrowingsService" options="-parameters" />
+      <module name="ConfigServer2" options="-parameters" />
+      <module name="CustomerModule" options="-parameters" />
+      <module name="CustomerService" options="-parameters" />
+      <module name="EurekaServer1" options="-parameters" />
+      <module name="EurekaServer2" options="-parameters" />
+      <module name="ReviewModule" options="-parameters" />
+      <module name="ReviewService" options="-parameters" />
+    </option>
+  </component>
+</project>
