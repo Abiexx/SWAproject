@@ -14,6 +14,13 @@
         <option value="$PROJECT_DIR$/APIGateWay/pom.xml" />
         <option value="$PROJECT_DIR$/ConfigServerGit/pom.xml" />
         <option value="$PROJECT_DIR$/BookCommandService2/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server2/pom.xml" />
+        <option value="$PROJECT_DIR$/book-command-service2/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server1/pom.xml" />
+        <option value="$PROJECT_DIR$/borrowings-service/pom.xml" />
+        <option value="$PROJECT_DIR$/customer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/review-service/pom.xml" />
       </list>
     </option>
   </component>

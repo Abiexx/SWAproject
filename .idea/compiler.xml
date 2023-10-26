@@ -7,45 +7,51 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BorrowingsService" />
-        <module name="CustomerService" />
+        <module name="book-queries-service" />
+        <module name="discovery-server" />
         <module name="BookCommandService (1)" />
         <module name="BookCommandService (2)" />
-        <module name="APIGateWay" />
-        <module name="EurekaServer2" />
-        <module name="ConfigServer2" />
-        <module name="ReviewService" />
-        <module name="EurekaServer1" />
-        <module name="BookQueriesService" />
+        <module name="customer-service" />
+        <module name="review-service" />
+        <module name="api-gateway" />
+        <module name="eureka-server2" />
+        <module name="borrowings-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book-command-service (1)" target="11" />
+      <module name="book-command-service (2)" target="11" />
       <module name="BookCommandModule" target="11" />
       <module name="BookCommandModule2" target="11" />
+      <module name="BookCommandService" target="11" />
       <module name="BookQueriesModule" target="11" />
       <module name="BorrowingsModule" target="11" />
+      <module name="ConfigServer2" target="1.8" />
       <module name="CustomerModule" target="11" />
       <module name="ReviewModule" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="APIGateWay" options="-parameters" />
       <module name="BookCommandModule" options="-parameters" />
       <module name="BookCommandModule2" options="-parameters" />
+      <module name="BookCommandService" options="-parameters" />
       <module name="BookCommandService (1)" options="-parameters" />
       <module name="BookCommandService (2)" options="-parameters" />
       <module name="BookQueriesModule" options="-parameters" />
-      <module name="BookQueriesService" options="-parameters" />
       <module name="BorrowingsModule" options="-parameters" />
-      <module name="BorrowingsService" options="-parameters" />
       <module name="ConfigServer2" options="-parameters" />
       <module name="CustomerModule" options="-parameters" />
-      <module name="CustomerService" options="-parameters" />
-      <module name="EurekaServer1" options="-parameters" />
-      <module name="EurekaServer2" options="-parameters" />
       <module name="ReviewModule" options="-parameters" />
-      <module name="ReviewService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="book-command-service (1)" options="-parameters" />
+      <module name="book-command-service (2)" options="-parameters" />
+      <module name="book-queries-service" options="-parameters" />
+      <module name="borrowings-service" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
+      <module name="eureka-server2" options="-parameters" />
+      <module name="review-service" options="-parameters" />
     </option>
   </component>
 </project>

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/APIGateWay/APIGateWay.iml" filepath="$PROJECT_DIR$/APIGateWay/APIGateWay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ConfigServerGit/ConfigServer2.iml" filepath="$PROJECT_DIR$/ConfigServerGit/ConfigServer2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EurekaServer1/EurekaServer1.iml" filepath="$PROJECT_DIR$/EurekaServer1/EurekaServer1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EurekaServer2/EurekaServer2.iml" filepath="$PROJECT_DIR$/EurekaServer2/EurekaServer2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/project.iml" filepath="$PROJECT_DIR$/.idea/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
     </modules>
   </component>
 </project>
