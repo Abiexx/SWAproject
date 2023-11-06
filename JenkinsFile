@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout Codebase'){
             steps {
-                echo 'Checking out codebase...'
+                echo 'Checking out codebase... checkingf'
                 git branch: 'main', url:'git@github.com:abiexx/SWAproject.git'
             }
            }
