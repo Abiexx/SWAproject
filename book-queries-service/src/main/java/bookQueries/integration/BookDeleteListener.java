@@ -23,7 +23,7 @@ public class BookDeleteListener {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-      log.info("deletebooktopic received :--- "+bookDtoString);
+      log.info("deletebooktopic received ---- :--- "+bookDtoString);
 
         BookDto bookDto;
         try {
