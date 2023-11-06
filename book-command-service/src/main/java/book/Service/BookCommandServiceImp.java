@@ -33,14 +33,12 @@ public class BookCommandServiceImp implements IBookCommandService {
     @Autowired
     private Environment environment;
 
-    private static final Logger logger = LoggerFactory.getLogger(BookCommandServiceImp.class);
     @Override
     public BookDto addBook(BookDto bookDTO) {
         Book book = BookAddapter.getBookFromBookDTO(bookDTO);
         bookDAO.save(book);
         kafkaSender.send("addbooktopic",bookDTO);
         return bookDTO;
-
     }
 
     @Override
@@ -50,9 +48,8 @@ public class BookCommandServiceImp implements IBookCommandService {
         Book book = null;
         if (optionalBook.isPresent()){
              book = optionalBook.get();
-            bookDAO.save(book);
-            kafkaSender.send("updatebooktopic",bookDTO);
-
+             bookDAO.save(book);
+             kafkaSender.send("updatebooktopic",bookDTO);
         }else {
            throw new BookNotFoundException(environment.getProperty("book.not.found") +" :- " +isbn);
         }

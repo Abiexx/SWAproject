@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("api/v1/books")
 @OpenAPIDefinition(info = @Info(title = "Book API",version = "3.0",description = "Book Information"))
@@ -19,21 +20,22 @@ public class BooksCommandController {
         private IBookCommandService iBookCommandService;
 
         @PostMapping
-        public ResponseEntity<?> addBook(@RequestBody BookDto bookDto){
+        public ResponseEntity<BookDto> addBook(@RequestBody BookDto bookDto){
         iBookCommandService.addBook(bookDto);
-        return new ResponseEntity<>( bookDto, HttpStatus.OK);
+        return new ResponseEntity<>( bookDto, HttpStatus.CREATED);
     }
         @PutMapping("/{isbn}")
-        public ResponseEntity<?> updateBook(@PathVariable long isbn, @RequestBody BookDto bookDto) throws BookNotFoundException {
+        public ResponseEntity<BookDto> updateBook(@PathVariable long isbn, @RequestBody BookDto bookDto) throws BookNotFoundException {
         iBookCommandService.updateBook(isbn,bookDto);
         return new ResponseEntity<>( bookDto, HttpStatus.OK);
     }
 
 
         @DeleteMapping("/{isbn}")
-        public ResponseEntity<?> deleteBook(@PathVariable long isbn){
+        public ResponseEntity<BookDto> deleteBook(@PathVariable long isbn){
         BookDto bookDto = iBookCommandService.deleteBook(isbn);
-        return new ResponseEntity<>(bookDto,HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+
     }
 
 

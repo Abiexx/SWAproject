@@ -101,6 +101,7 @@ services:
   discovery-server:
     image: abiexx/discovery-server:latest
     container_name: discovery-server
+    pull_policy: always
     ports:
       - "8761:8761"
     environment:
@@ -114,9 +115,9 @@ services:
     image: mongo:4.4.14-rc0-focal
     restart: always
     ports:
-      - "27017:27017"
+      - "27018:27017"
     expose:
-      - "27017"
+      - "27018"
     volumes:
       - ./mongo-data:/data/db
 
@@ -135,22 +136,31 @@ services:
       - discovery-server
 
 
-  ## Product-Service Docker Compose Config
+  ## Book-Command-Service Docker Compose Config
   book-command-service:
     container_name: book-command-service
     image: abiexx/book-command-service:latest
+    ports:
+      - "8091:8091"
+    expose:
+        - "8091"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - mongo
       - discovery-server
       - zipkin
+      - broker
       - api-gateway
 
   ## Order-Service Docker Compose Config
-  book-query-service:
-    container_name: book-query-service
-    image: abiexx/book-query-service:latest
+  book-queries-service:
+    container_name: book-queries-service
+    image: abiexx/book-queries-service:latest
+    ports:
+      - "8093:8093"
+    expose:
+        - "8093"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 #      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order-service

@@ -1,4 +1,4 @@
-package book.ExceptionHandler;
+package bookQueries.ExceptionHandler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

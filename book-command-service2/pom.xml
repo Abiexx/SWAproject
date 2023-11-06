@@ -12,9 +12,9 @@
 	</parent>
 
 	<groupId>LibrarySystem</groupId>
-	<artifactId>BookCommandService</artifactId>
+	<artifactId>book-command-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BookCommandService</name>
+	<name>book-command-service</name>
 	<description>Demo project for Spring Boot</description>
 
 </project>

@@ -25,10 +25,10 @@
     <!-- Common modules shared by all microservices -->
     <modules>
         <module>api-gateway</module>
-        <module>discovery-server</module>
+        <module>eureka-server2</module>
         <module>book-queries-service</module>
         <module>book-command-service</module>
-<!--        <module>review-service</module>-->
+        <!--        <module>review-service</module>-->
 <!--        <module>borrowings-service</module>-->
 <!--        <module>customer-service</module>-->
         <!-- Add other child modules (services) here -->

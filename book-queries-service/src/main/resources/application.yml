@@ -11,10 +11,10 @@ spring:
       port: 27017
       database: bookqueries
 
-  activemq:
-    broker-url: tcp://localhost:61616
-    user: admin
-    password: admin
+#  activemq:
+#    broker-url: tcp://localhost:61616
+#    user: admin
+#    password: admin
 
 
 logging:

@@ -1,4 +1,4 @@
-package book.ExceptionHandler;
+package bookQueries.ExceptionHandler;
 
 import lombok.Getter;
 import lombok.Setter;

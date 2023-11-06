@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/BookCommandService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServer1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServer1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-command-service/src/main/java" charset="UTF-8" />
@@ -17,7 +19,9 @@
     <file url="file://$PROJECT_DIR$/customer-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/discovery-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/review-service/src/main/java" charset="UTF-8" />

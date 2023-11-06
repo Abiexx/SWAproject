@@ -9,9 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="book-queries-service" />
         <module name="discovery-server" />
-        <module name="BookCommandService (1)" />
-        <module name="BookCommandService (2)" />
+        <module name="book-command-service (2)" />
         <module name="customer-service" />
+        <module name="book-command-service (1)" />
         <module name="review-service" />
         <module name="api-gateway" />
         <module name="eureka-server2" />
@@ -19,15 +19,23 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="book-command-service (1)" target="11" />
-      <module name="book-command-service (2)" target="11" />
+      <module name="book-command-service" target="11" />
       <module name="BookCommandModule" target="11" />
       <module name="BookCommandModule2" target="11" />
       <module name="BookCommandService" target="11" />
+      <module name="BookCommandService (1)" target="11" />
+      <module name="BookCommandService (2)" target="11" />
       <module name="BookQueriesModule" target="11" />
       <module name="BorrowingsModule" target="11" />
       <module name="ConfigServer2" target="1.8" />
       <module name="CustomerModule" target="11" />
+      <module name="discovery-server" target="11" />
+      <module name="discovery-server (1) (LibrarySystem)" target="11" />
+      <module name="discovery-server (2) (discovery-server)" target="11" />
+      <module name="eureka-server" target="11" />
+      <module name="eureka-server1" target="11" />
+      <module name="eureka-server2 (2)" target="11" />
+      <module name="EurekaServer1" target="11" />
       <module name="ReviewModule" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -42,15 +50,22 @@
       <module name="BorrowingsModule" options="-parameters" />
       <module name="ConfigServer2" options="-parameters" />
       <module name="CustomerModule" options="-parameters" />
+      <module name="EurekaServer1" options="-parameters" />
       <module name="ReviewModule" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
+      <module name="book-command-service" options="-parameters" />
       <module name="book-command-service (1)" options="-parameters" />
       <module name="book-command-service (2)" options="-parameters" />
       <module name="book-queries-service" options="-parameters" />
       <module name="borrowings-service" options="-parameters" />
       <module name="customer-service" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
+      <module name="discovery-server (1) (LibrarySystem)" options="-parameters" />
+      <module name="discovery-server (2) (discovery-server)" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server1" options="-parameters" />
       <module name="eureka-server2" options="-parameters" />
+      <module name="eureka-server2 (2)" options="-parameters" />
       <module name="review-service" options="-parameters" />
     </option>
   </component>
