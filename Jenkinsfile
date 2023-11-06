@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout Codebase'){
             steps {
-                echo 'Checking out codebase...checking and ad'
+                echo 'Checking out codebase...'
 //                 git branch: 'main', url:'git@github.com:abiexx/SWAproject.git'
             }
            }
@@ -23,3 +23,4 @@ pipeline {
             }
         }
     }
+}
