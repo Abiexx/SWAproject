@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MICROSERVICE_NAME = 'my-microservice' // This can be a parameter or environment variable
+        MICROSERVICE_NAME = 'book-command-service' // This can be a parameter or environment variable
     }
 
     stages {
