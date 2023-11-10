@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    def dockerImage = "your-docker-registry/$MICROSERVICE_NAME:latest"
+                    def dockerImage = "abiexx/$MICROSERVICE_NAME:latest"
 
                     sh "docker build -t $dockerImage ."
                     sh "docker run -d -p 8080:8080 $dockerImage"
