@@ -2,8 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MICROSERVICE_NAME = 'book-command-service' // This can be a parameter or environment variable
-        MAVEN_OPTS = '-Dmaven.repo.local=.m2/repository' // Use a local Maven repository
+        MICROSERVICE_NAME = 'book-command-service'
     }
 
     stages {
@@ -16,38 +15,30 @@ pipeline {
         stage('Build and Test') {
             steps {
                 script {
-                    def mavenHome = tool 'Maven' // Assuming 'Maven' is configured in Jenkins
-                    def mavenCMD = "${mavenHome}/bin/mvn"
-                    def mavenSettings = "${WORKSPACE}/settings.xml" // You may have custom Maven settings
-
-                    // Use Maven wrapper if available; otherwise, use the installed Maven
-                    sh "chmod +x mvnw"
-                    sh "./mvnw clean install -Dmaven.test.failure.ignore=true -pl $MICROSERVICE_NAME -s $mavenSettings"
+                    def mavenHome = tool 'Maven'
+                    sh "${mavenHome}/bin/mvn clean install -Dmaven.test.failure.ignore=true -pl $MICROSERVICE_NAME"
                 }
             }
         }
 
-        stage('Deploy') {
-            steps {
-                script {
-                    def dockerImage = "abiexx/$MICROSERVICE_NAME:latest"
-
-                    sh "docker build -t $dockerImage ."
-                    sh "docker run -d -p 8080:8080 $dockerImage"
-                }
-            }
-        }
+//         stage('Deploy') {
+//             steps {
+//                 script {
+//                     def dockerImage = "abiexx/$MICROSERVICE_NAME:latest"
+//                     sh "docker build -t $dockerImage ."
+//                     sh "docker run -d -p 8080:8080 $dockerImage"
+//                 }
+//             }
+//         }
     }
 
     post {
         always {
-            // Clean up after the build, such as stopping and removing Docker containers
             sh "docker stop $MICROSERVICE_NAME || true"
             sh "docker rm $MICROSERVICE_NAME || true"
         }
     }
 }
-
 
 
 
