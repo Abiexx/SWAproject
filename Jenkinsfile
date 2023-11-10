@@ -14,14 +14,18 @@ pipeline {
         }
 
         stage('Build and Test') {
-                    steps {
-                        script {
-                            def mavenHome = tool 'Maven'
-                            sh "${mavenHome}/bin/mvn clean install -Dmaven.test.failure.ignore=true -pl $MICROSERVICE_NAME"
-                        }
-                    }
-                }
+            steps {
+                script {
+                    def mavenHome = tool 'Maven' // Assuming 'Maven' is configured in Jenkins
+                    def mavenCMD = "${mavenHome}/bin/mvn"
+                    def mavenSettings = "${WORKSPACE}/settings.xml" // You may have custom Maven settings
 
+                    // Use Maven wrapper if available; otherwise, use the installed Maven
+                    sh "chmod +x mvnw"
+                    sh "./mvnw clean install -Dmaven.test.failure.ignore=true -pl $MICROSERVICE_NAME -s $mavenSettings"
+                }
+            }
+        }
 
         stage('Deploy') {
             steps {
