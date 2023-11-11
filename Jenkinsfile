@@ -2,7 +2,7 @@ pipeline {
     agent any
 
    environment {
-           MICROSERVICE_NAME = 'book-command-service'
+           MICROSERVICE_NAME = 'book-queries-service'
        }
 
        tools {
