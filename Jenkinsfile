@@ -1,25 +1,29 @@
 pipeline {
     agent any
 
-    environment {
-        MICROSERVICE_NAME = 'book-command-service'
-    }
+   environment {
+           MICROSERVICE_NAME = 'book-command-service'
+       }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
+       tools {
+           maven 'Maven' // Use the name you provided in Jenkins Global Tool Configuration
+       }
 
-        stage('Build and Test') {
-            steps {
-                script {
-                    def mavenHome = tool 'Maven'
-                    sh "${mavenHome}/bin/mvn clean install -Dmaven.test.failure.ignore=true -pl $MICROSERVICE_NAME"
-                }
-            }
-        }
+       stages {
+           stage('Checkout') {
+               steps {
+                   checkout scm
+               }
+           }
+
+           stage('Build and Test') {
+               steps {
+                   script {
+                       sh "mvn clean install -pl $MICROSERVICE_NAME"
+                   }
+               }
+           }
+
 
 //         stage('Deploy') {
 //             steps {
